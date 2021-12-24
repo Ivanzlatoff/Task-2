@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Завдання №2</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        background-color: #ddd;
+        color: #333;
+        font-family: sans-serif;
+        text-align: center;
+      }
+
+      form {
+        margin-top: 200px;
+      }
+
+      .button {
+        margin-top: 20px;
+      }
+      .button-2 {
+          margin-top: 100px;
+      }
+    </style>
+  </head>
+ 
+  <body>
+    <h1>Веб-сервіс</h1>
+    <form action="/greeting" method="post">
+      <h3>Ваше ім'я</h3>
+      <input id="uid" type="text" name="name" placeholder="John Doe">
+      <div>
+        <input formaction="/greeting" type="submit" value="Привітатись" class="button">
+      </div>
+      <div>
+        <input formaction="all_users" formmethod="get" type="submit" value="Список усіх, з ким уже привіталися" class="button-2">
+      </div>
+    </form>
+  </body>
+</html>
