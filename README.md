@@ -13,7 +13,7 @@
   - mongoose (`npm i mongoose`);
   - nodemon (`npm i nodemon`).
 
-2. .env must be created with DB_CONNECTION set to your Mongo DB uri.
+2. **.env** file must be created with DB_CONNECTION set to your Mongo DB uri.
 For example:
 DB_CONNECTION='mongodb+srv://*username*:*password*@freecodecamp.5thxi.mongodb.net/*collection*?retryWrites=true&w=majority' 
 
