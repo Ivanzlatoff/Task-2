@@ -6,12 +6,12 @@
 
 1. Ensure **node version 16.13.1 LTS** and following dependecies are installed in your working directory
 (in order to install them run the commands in brackets in your working directory terminal):
-  - body-parser (npm i body-parser);
-  - cors (npm i cors);
-  - dotenv (npm i dotenv);
-  - express (npm i express);
-  - mongoose (npm i mongoose);
-  - nodemon (npm i nodemon).
+  - body-parser (`npm i body-parser`);
+  - cors (`npm i cors`);
+  - dotenv (`npm i dotenv`);
+  - express (`npm i express`);
+  - mongoose (`npm i mongoose`);
+  - nodemon (`npm i nodemon`).
 
 2. .env must be created with DB_CONNECTION set to your Mongo DB uri.
 For example:
