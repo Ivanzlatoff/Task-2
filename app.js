@@ -57,7 +57,15 @@ app.post('/greeting', async (req, res) => {
 app.get('/all_users', async (req, res) => {
     try{
         const users = await User.find();
-        res.json(users);
+        var title = '<h2>Список усіх, з ким уже привіталися</h1>'
+        name_list = ''
+        for (let i=0; i < users.length; i++ ) {
+            name_list += '<h4>'
+            name_list += users[i]['name']
+            name_list += '</h4>'
+            console.log(name_list)
+        } 
+        res.send(title + name_list)
     }catch (err) {
         res.json({message:err});
     }
@@ -65,4 +73,4 @@ app.get('/all_users', async (req, res) => {
 
 
 
-app.listen(3000)
+app.listen(3001)
