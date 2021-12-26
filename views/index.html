@@ -30,7 +30,7 @@
     <h1>Веб-сервіс</h1>
     <form action="/greeting" method="post">
       <h3>Ваше ім'я</h3>
-      <input id="uid" type="text" name="name" placeholder="John Doe">
+      <input id="uid" type="text" name="name" placeholder="John Doe" onclick=validateForm()>
       <div>
         <input formaction="/greeting" type="submit" value="Привітатись" class="button">
       </div>
@@ -38,5 +38,16 @@
         <input formaction="all_users" formmethod="get" type="submit" value="Список усіх, з ким уже привіталися" class="button-2">
       </div>
     </form>
+    <script>
+      function validateForm(){
+          var nameRegex = /^[a-zA-Z\-]+$/;
+          var validfirstUsername = document.frm.firstName.value.match(nameRegex);
+          if(validUsername == null){
+              alert("Your first name is not valid. Only characters A-Z, a-z and '-' are  acceptable.");
+              document.frm.firstName.focus();
+              return false;
+          }
+      }
+    </script>
   </body>
 </html>

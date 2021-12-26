@@ -27,6 +27,12 @@ mongoose.connect(process.env.DB_CONNECTION, {
 // SENDING A POST REQUEST WIHT A NAME
 app.post('/greeting', async (req, res) => {
     const user = req.body.name
+    var nameRegex = /^[A-Za-z-'\s]{1,32}/;
+    var nameResult = nameRegex.test(user);
+    if (!nameResult) {
+      res.sendFile(path.join(__dirname, "views", "invalid_name.html"));
+      return;
+    } 
     mongoose.connect(process.env.DB_CONNECTION, {
         useNewUrlParser: true
     }, () =>
