@@ -1,14 +1,14 @@
-# Берем образ среды для запуска приложения, в данном случае это node 16 версии
+# Use base image node 16
 FROM node:16-alpine
 
-# Указываем рабочую директорию внутри контейнера, по стандартам проект должен находится в srv/src
+# Create working directory app
 WORKDIR /srv/src/app
 
-# переносим проект в рабочую директорию
+# Copy project to working directory 
 COPY . .
 
-# нужно установить все npm пакеты
+# Installing all node dependencies 
 RUN npm install package.json
 
-# запускаем приложение
+# Start application
 CMD ["npm", "start"]
