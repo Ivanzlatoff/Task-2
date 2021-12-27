@@ -14,7 +14,7 @@ DB_CONNECTION='mongodb+srv://*username*:*password*@freecodecamp.5thxi.mongodb.ne
 
 4. To run the server type `npm start` in the working directory terminal.
 
-The server should be running on localhost:3000.
+The server should be running on localhost:3001.
 
 
 ### It can also be run with docker
@@ -25,7 +25,7 @@ DB_CONNECTION='mongodb+srv://*username*:*password*@freecodecamp.5thxi.mongodb.ne
 
 2. Prior to running docker build your image by running `docker build -t [name] .`
 
-3. To run container from the image run `docker run --rm -p 3000:3000 [image_name]`
+3. To run container from the image run `docker run --rm -p 3001:3001 [image_name]`
 
 Your application will be avaialable on localhost:3001.
 
